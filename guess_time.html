@@ -7,17 +7,27 @@
 // Defining the statements to determine whether user's guess is within the range of current answer
 
 
-// Using If/Else statement to determine whether guess is correct, and return answer.
-	if (guess == seconds) {
-		alert("You were so spot on; you get a cookie!");
-	}
-	else {
-		alert("You weren't even close! The answer was " + seconds);
-	}
+//  This works, but isn't exciting. 
+//  Using If/Else statement to determine whether guess is correct, and return answer.
+	// if (guess == seconds) {
+	// 	alert("You were so spot on; you get a cookie!");
+	// }
+	// else {
+	// 	alert("You weren't even close! The answer was " + seconds);
+	// }
 
 
 //  Trying to use For loops to determine whether user answer was within X range of answer
-
+	for (x = seconds - 100; x <= seconds + 100; x ++) {
+		if (guess == x) {
+			alert("You were so spot on; you get a cookie! The answer was " + seconds);
+			break;
+		}
+		else {
+			alert("You weren't even close! The answer was " + seconds);
+			break;
+		}
+	}
 
 //  Trying to use While loops to determine whether user answer was within X range of answer
 	// while (seconds >= seconds - 100) {
