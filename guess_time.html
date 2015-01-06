@@ -6,6 +6,18 @@
 
 // Defining the statements to determine whether user's guess is within the range of current answer
 
+//  Trying to use While loops to determine whether user answer was within X range of answer
+	while (guess >= seconds - 100) {
+		if (guess <= seconds + 100) {
+		 	alert("Works! seconds - 100. You were only " + seconds + " off!");
+		 	break;
+		}
+		else {
+			alert("You lose... horribly. This is how many seconds have passed: " + seconds);
+			break;
+		}
+	}	 
+
 
 //  This works, but isn't exciting. 
 //  Using If/Else statement to determine whether guess is correct, and return answer.
@@ -18,33 +30,17 @@
 
 
 //  Trying to use For loops to determine whether user answer was within X range of answer
-	for (x = seconds - 100; x <= seconds + 100; x ++) {
-		if (guess == x) {
-			alert("You were so spot on; you get a cookie! The answer was " + seconds);
-			break;
-		}
-		else {
-			alert("You weren't even close! The answer was " + seconds);
-			break;
-		}
-	}
-
-//  Trying to use While loops to determine whether user answer was within X range of answer
-	// while (seconds >= seconds - 100) {
-	// 	if (guess == seconds) {
-	// 	 	alert("Works! seconds - 100. You were only " + guess - seconds + " off!");
-	// 	 }
-	// 		while (seconds <= seconds + 100) {
-	// 			if (guess == seconds) {
-	// 				alert("Works! seconds + 100. You were only " + guess - seconds + " off!");
-	// 			}
-	// 			else {
-	// 				alert("You lose... horribly. This is how many seconds have passed: " + seconds);
-	// 				break;
-	// 			}
-	// 		}
+	// for (x = seconds; x <= seconds + 500; x ++) {
+	// 	if (guess = x) {
+	// 		alert("You were so spot on; you get a cookie! The answer was " + seconds);
+	// 		break;
 	// 	}
-	// }	 
+	// 	else {
+	// 		alert("You weren't even close! The answer was " + seconds);
+	// 		break;
+	// 	}
+	// }
+
 
 
 </script>
