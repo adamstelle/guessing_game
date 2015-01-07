@@ -4,43 +4,19 @@
 	var date = new Date();
 	var seconds = date.getSeconds() + (60 * date.getMinutes()) + (60 * 60 * date.getHours()); 
 
-// Defining the statements to determine whether user's guess is within the range of current answer
-
-//  Trying to use While loops to determine whether user answer was within X range of answer
-	while (guess >= seconds - 100) {
-		if (guess <= seconds + 100) {
-		 	alert("Works! You get a cookie for being close! " + seconds + " , is how far off you were!");
-		 	break;
+	function compareAnswers(compAnswer, userAnswer) {
+		var comparison = (Math.abs(compAnswer - userAnswer));
+		if (comparison <= 500) {
+			alert("Gold Medal");
+		}
+		else if (comparison <= 3000) {
+			alert("Silver Medal");
 		}
 		else {
-			alert("You lose... horribly. This is how many seconds have passed: " + seconds);
-			break;
-		}
-	}	 
+			alert("You lose!");
+		};
+	};
 
-
-//  This works, but isn't exciting. 
-//  Using If/Else statement to determine whether guess is correct, and return answer.
-	// if (guess == seconds) {
-	// 	alert("You were so spot on; you get a cookie!");
-	// }
-	// else {
-	// 	alert("You weren't even close! The answer was " + seconds);
-	// }
-
-
-//  Trying to use For loops to determine whether user answer was within X range of answer
-	// for (x = seconds; x <= seconds + 500; x ++) {
-	// 	if (guess = x) {
-	// 		alert("You were so spot on; you get a cookie! The answer was " + seconds);
-	// 		break;
-	// 	}
-	// 	else {
-	// 		alert("You weren't even close! The answer was " + seconds);
-	// 		break;
-	// 	}
-	// }
-
-
+	compareAnswers(seconds, guess)
 
 </script>
